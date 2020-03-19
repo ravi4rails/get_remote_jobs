@@ -1,13 +1,13 @@
 <%= form_with scope: :company, url: companies_path, local: true do |form| %>
 
-  <% if @company.errors.any? %>
+  <% if company.errors.any? %>
     <div id="error_explanation">
       <h2>
-        <%= pluralize(@company.errors.count, "error") %> prohibited
+        <%= pluralize(company.errors.count, "error") %> prohibited
         this company from being saved:
       </h2>
       <ul>
-        <% @company.errors.full_messages.each do |msg| %>
+        <% company.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
       </ul>
@@ -38,14 +38,9 @@
     <%= form.label :head_quarter_location %><br>
     <%= form.text_field :head_quarter_location %>
   </p>
-
-  <p>
-    <%= form.label :head_quarter_location %><br>
-    <%= form.text_field :head_quarter_location %>
-  </p>
  
   <p>
     <%= form.submit %>
   </p>
-  
+
 <% end %>
