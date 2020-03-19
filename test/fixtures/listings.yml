@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  link_to_apply: MyString
+  job_type: MyString
+  regional_area: MyString
+  category_id: one
+  company_id: one
+
+two:
+  title: MyString
+  description: MyText
+  link_to_apply: MyString
+  job_type: MyString
+  regional_area: MyString
+  category_id: two
+  company_id: two
