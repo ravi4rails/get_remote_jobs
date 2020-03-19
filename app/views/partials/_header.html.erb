@@ -1,0 +1,57 @@
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Find a Job</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarPages" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
+            Category
+          </a>
+          <div class="dropdown-menu dropdown-menu-sm" aria-labelledby="navbarPages"> <div class="container">
+            
+              <div class="row no-gutters">
+                <div class="col-10">
+                  <% Category.all.each do |category| %>
+                    <%= link_to category.name %>
+                  <% end %>
+                </div>
+              </div>
+            </div> <!-- / .row -->
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Resources</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Community</a>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link btn btn-danger rounded-0">Post a job</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<style type="text/css">
+  .text{
+    color: #212529;
+  }
+  #nav ul li:hover a{ 
+    color: #212529;
+  }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  .dropdown-toggle::after { 
+    content: none; 
+  }
+ .dropdown-menu {
+    width: 200px !important
+  } 
+</style>
