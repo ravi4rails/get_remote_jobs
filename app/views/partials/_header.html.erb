@@ -9,19 +9,13 @@
           <a class="nav-link" href="#">Find a Job</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarPages" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
+          <a href="" class="dropdown-toggle nav-link" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Category
           </a>
-          <div class="dropdown-menu dropdown-menu-sm" aria-labelledby="navbarPages"> <div class="container">
-            
-              <div class="row no-gutters">
-                <div class="col-10">
-                  <% Category.all.each do |category| %>
-                    <%= link_to category.name %>
-                  <% end %>
-                </div>
-              </div>
-            </div> <!-- / .row -->
+          <div class="dropdown-menu p-3" aria-labelledby="dropdownMenuButton">
+            <% Category.all.each do |category| %>
+              <%= link_to category.name, class: "dropdown-item" %>
+            <% end %>
           </div>
         </li>
         <li class="nav-item">
